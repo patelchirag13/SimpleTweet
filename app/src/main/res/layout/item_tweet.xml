@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp">
+    android:background="@drawable/background_border"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
 
     <ImageView
         android:id="@+id/ivProfileImage"
@@ -12,6 +16,7 @@
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         tools:srcCompat="@tools:sample/avatars" />
@@ -24,6 +29,10 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivProfileImage"
+        android:fontFamily="@font/roboto"
+        android:textColor="#050505"
+        android:textSize="15sp"
+        android:textStyle="bold"
         tools:text="chirag1359" />
 
     <TextView
@@ -35,5 +44,8 @@
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/ivProfileImage"
         android:autoLink="all"
+        android:fontFamily="@font/roboto"
+        android:textColor="#050505"
+        android:textSize="16sp"
         tools:text="This is my tweet!" />
 </RelativeLayout>
