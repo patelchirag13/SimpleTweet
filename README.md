@@ -29,7 +29,19 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+  > User can **sign in to Twitter** using OAuth login:
+  >> <img src="https://github.com/patelchirag13/SimpleTweet/blob/master/WalkThrough-Auth.gif" width=250><br>
+
+  > User can view tweets from their home timeline with displayed username, name, the relative timestamp and body for each tweet with infinite pagation.
+  >> <img src="https://github.com/patelchirag13/SimpleTweet/blob/master/WalkThrough-InfinteScroll.gif" width=250><br>
+
+
+  > Links in tweets are clickable and will launch the web browser:
+  >> <img src="https://github.com/patelchirag13/SimpleTweet/blob/master/WalkThrough-ClickableLink.gif" width=250><br>
+
+ > User can refresh tweets timeline by pulling down to refresh:
+ >> <img src="https://github.com/patelchirag13/SimpleTweet/blob/master/WalkThrough-Refresh.gif" width=250><br>
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
