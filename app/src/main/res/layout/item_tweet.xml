@@ -46,6 +46,14 @@
         tools:text="@chirag1359" />
 
     <TextView
+        android:id="@+id/ivTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tvScreenName"
+        android:text="2m" />
+
+    <TextView
         android:id="@+id/tvBody"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
