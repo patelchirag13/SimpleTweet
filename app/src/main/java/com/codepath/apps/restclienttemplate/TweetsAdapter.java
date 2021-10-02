@@ -1,6 +1,7 @@
 package com.codepath.apps.restclienttemplate;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.Target;
+import com.codepath.apps.restclienttemplate.models.ImageMedia;
 import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import java.util.List;
@@ -67,18 +72,29 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         ImageView ivProfileImage;
         TextView tvBody;
         TextView tvScreenName;
+        ImageView ivImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
             tvBody = itemView.findViewById(R.id.tvBody);
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
+            ivImage = itemView.findViewById(R.id.ivImage);
         }
 
         public void bind(Tweet tweet) {
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.screenName);
             Glide.with(context).load(tweet.user.publicImageUrl).circleCrop().into(ivProfileImage);
+            try {
+                if (tweet.imageMedia.type.equals("photo")){
+                    ivImage.setVisibility(View.VISIBLE);
+                    Glide.with(context).load(tweet.imageMedia.image).apply(RequestOptions.bitmapTransform(new RoundedCorners(20))).override(Target.SIZE_ORIGINAL).into(ivImage);
+                }
+            }
+            catch(NullPointerException e) {
+                ivImage.setVisibility(View.GONE);
+            }
         }
     }
 }
