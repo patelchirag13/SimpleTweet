@@ -24,7 +24,8 @@
                 android:fontFamily="@font/roboto"
                 android:text="Twitter App"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/logo"
