@@ -24,17 +24,21 @@
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/ic_icons8_twitter"
                 android:paddingStart="20dp" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:counterEnabled="true"
-        app:counterMaxLength="280"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:counterMaxLength="280">
 
         <EditText
             android:id="@+id/etCompose"
@@ -44,12 +48,12 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
-            android:autofillHints=""
             android:ems="10"
             android:gravity="start|top"
             android:hint="@string/what_s_happening"
             android:inputType="textMultiLine"
-            android:minLines="5" />
+            android:minLines="5"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btnTweet"
@@ -62,5 +66,5 @@
         android:background="@color/twitter_blue"
         android:text="@string/tweet"
         android:textColor="@android:color/white" />
-
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
