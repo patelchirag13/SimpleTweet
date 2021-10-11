@@ -31,7 +31,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="https://github.com/patelchirag13/SimpleTweet/blob/master/Tweet.gif" width=250>
+<img src="https://github.com/patelchirag13/SimpleTweet/blob/master/WalkThrough-Tweet.gif" width=250>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
